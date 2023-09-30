@@ -31,5 +31,4 @@ public class ThirdAlgorithm {
         // Compare and return the maximum of the left and right halves
         return Math.max(leftMax, rightMax);
     }
-    
 }

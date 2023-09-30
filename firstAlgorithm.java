@@ -7,18 +7,18 @@ public class FirstAlgorithm {
     }
 
     public static int findMaximum(int[] arr) {
-    if (arr.length == 0) {
-        throw new IllegalArgumentException("Array is empty");
-    }
-
-    int max = arr[0]; // Assume the first element is the maximum
-
-    for (int num : arr) {
-        if (num > max) {
-            max = num; // Update max if a larger number is found
+        if (arr.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
         }
-    }
 
-    return max;
-}
+        int max = arr[0]; // Assume the first element is the maximum
+
+        for (int num : arr) {
+            if (num > max) {
+                max = num; // Update max if a larger number is found
+            }
+        }
+
+        return max;
+    }
 }

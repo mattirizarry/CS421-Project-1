@@ -6,27 +6,27 @@ public class SecondAlgorithm {
     }
 
     public static int findMaximum(int[] arr, int left, int right) {
-    if (left == right) {
-        return arr[left]; // Base case: When there's only one element left
-    }
+        if (left == right) {
+            return arr[left]; // Base case: When there's only one element left
+        }
 
-    int mid = (left + right) / 2;
+        int mid = (left + right) / 2;
 
-    // Recursively find the maximum in the left and right subarrays
-    int leftMax = findMaximum(arr, left, mid);
-    int rightMax = findMaximum(arr, mid + 1, right);
+        // Recursively find the maximum in the left and right subarrays
+        int leftMax = findMaximum(arr, left, mid);
+        int rightMax = findMaximum(arr, mid + 1, right);
 
-    // Combine the results to find the maximum
-    return Math.max(leftMax, rightMax);
+        // Combine the results to find the maximum
+        return Math.max(leftMax, rightMax);
     }
 
     // Wrapper function to start the recursion
-public static int findMaximum(int[] arr) {
-    if (arr.length == 0) {
-        throw new IllegalArgumentException("Array is empty");
+    public static int findMaximum(int[] arr) {
+        if (arr.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+        return findMaximum(arr, 0, arr.length - 1);
     }
-    return findMaximum(arr, 0, arr.length - 1);
-}
 }
 
 
