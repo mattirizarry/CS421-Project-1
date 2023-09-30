@@ -9,9 +9,9 @@ public class FirstAlgorithm {
     public static int findMaximum(int[] arr) {
         int max = arr[0]; // Assume the first element is the maximum
 
-        for (int num : arr) {
-            if (num > max) {
-                max = num; // Update max if a larger number is found
+        for (int num = 1; num < arr.length; num++) {
+            if (arr[num] > max) {
+                max = arr[num]; // Update max if a larger number is found
             }
         }
 
